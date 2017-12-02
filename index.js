@@ -44,11 +44,8 @@ function createRock(x) {
           rock.remove();
         }
       }
-      window.requestAnimationFrame(step);
-    }
-    move(rock);
-  }
-  moveRock(rock);
+      window.requestAnimationFrame(moveRock);
+
   ROCKS.push(rock);
   return rock;
 }
