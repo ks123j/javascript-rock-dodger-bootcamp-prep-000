@@ -39,9 +39,9 @@ function createRock(x) {
         }
 
         if (top < GAME_HEIGHT) {
-          window.requestAnimationFrame(step);
+          window.requestAnimationFrame(moveRock);
         } else {
-          el.remove();
+          rock.remove();
         }
       }
       window.requestAnimationFrame(step);
