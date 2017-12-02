@@ -40,11 +40,11 @@ function createRock(x) {
         if (checkCollision(el)) {
         		endGame();
         }
-        else if (top === 388) {
-          el.parentElement.removeChild(el);
-        }
-        else if (top < 392) {
+
+        if (top < GAME_HEIGHT) {
           window.requestAnimationFrame(step);
+        } else {
+          el.remove();
         }
       }
       window.requestAnimationFrame(step);
